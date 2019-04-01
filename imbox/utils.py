@@ -4,7 +4,7 @@ logger = logging.getLogger(__name__)
 
 def str_encode(value='', encoding=None, errors='strict'):
     logger.debug("Encode str {} with and errors {}".format(value, encoding, errors))
-    return str(value, encoding, errors)
+    return str(value, encoding or 'utf-8', errors)
 
 
 def str_decode(value='', encoding=None, errors='strict'):
